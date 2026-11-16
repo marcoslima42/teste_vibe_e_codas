@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimuMaratona — WebGL2 Programming Contest Arena Background</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Full-Viewport WebGL2 Programming Contest Arena Background -->
+  <canvas id="arena-bg" aria-label="3D Programming Contest Arena WebGL2 Animation"></canvas>
+
+  <!-- Optional Website Foreground Overlay (Toggleable via 'Pure Background Mode') -->
+  <div class="ui-layer">
+    <header class="top-nav">
+      <div class="brand hideable-ui">
+        <div class="brand-balloons" aria-hidden="true">
+          <span class="balloon-dot red"></span>
+          <span class="balloon-dot blue"></span>
+          <span class="balloon-dot gold"></span>
+          <span class="balloon-dot green"></span>
+        </div>
+        <span class="brand-title">SimuMaratona</span>
+        <span class="live-badge">Live Arena</span>
+      </div>
+
+      <div class="nav-actions">
+        <button id="btn-trigger-ac" class="btn btn-ac hideable-ui" title="Trigger an ACCEPTED celebration wave across the arena">
+          🎉 Trigger AC! Wave
+        </button>
+        <button id="btn-toggle-ui" class="btn" title="Toggle Website UI Overlay (Shortcut: H)">
+          Pure Background Mode (H)
+        </button>
+      </div>
+    </header>
+
+    <section class="hero-card hideable-ui">
+      <div class="hero-eyebrow">WebGL2 Interactive Arena Background</div>
+      <h1>Programming Contest Arena</h1>
+      <p>
+        Competitors across the arena alternate between <strong>deep algorithmic focus</strong>—studying glowing problem tablets and typing solutions—and <strong>jubilant celebrations</strong> as they carry buoyant helium problem balloons.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">50</span>
+          <span class="stat-label">Competitors</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">12</span>
+          <span class="stat-label">Team Pods</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">80+</span>
+          <span class="stat-label">Helium Balloons</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bottom-dock hideable-ui">
+      <div class="control-panel">
+        <div class="control-group">
+          <span class="control-label">Competitors:</span>
+          <button class="btn active" data-mood="balanced">Dynamic Mix</button>
+          <button class="btn" data-mood="focused">Deeply Focused</button>
+          <button class="btn" data-mood="celebrating">Celebrating AC!</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="control-group">
+          <span class="control-label">Camera:</span>
+          <button class="btn active" data-camera="cinematic">Arena Cinema</button>
+          <button class="btn" data-camera="carriers">Balloon Carriers</button>
+          <button class="btn" data-camera="overview">Grand Overview</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="control-group">
+          <span class="control-label">Theme:</span>
+          <button class="btn active" data-theme="cyber">Contest Night</button>
+          <button class="btn" data-theme="finals">World Finals</button>
+          <button class="btn" data-theme="emerald">Accepted Matrix</button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script defer src="js/math3d.js"></script>
+  <script defer src="js/geometry.js"></script>
+  <script defer src="js/shaders.js"></script>
+  <script defer src="js/arena-background.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
